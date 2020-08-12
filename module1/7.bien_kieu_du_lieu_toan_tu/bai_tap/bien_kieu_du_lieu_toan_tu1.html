@@ -16,12 +16,12 @@
 </form>
 <script>
     function tinhDiem(){
-        let A =document.getElementById("diemly").value;
-        let B =document.getElementById("diemhoa").value;
-        let C =document.getElementById("diemsinh").value;
-        let D =(parseInt(A)+parseInt(B)+parseInt(C))/3;
-        let E =parseInt(A)+parseInt(B)+parseInt(C);
-        document.write("điểm trung bình:"+ D+ "</br>tổng điểm là:"+ E);
+        let diem_ly =document.getElementById("diemly").value;
+        let diem_hoa =document.getElementById("diemhoa").value;
+        let diem_sinh =document.getElementById("diemsinh").value;
+        let DTB =(parseInt(diem_ly)+parseInt(diem_hoa)+parseInt(diem_sinh))/3;
+        let tong =parseInt(diem_ly)+parseInt(diem_hoa)+parseInt(diem_sinh);
+        document.write("điểm trung bình:"+ DTB+ "</br>tổng điểm là:"+ tong);
     }
 
 </script>
