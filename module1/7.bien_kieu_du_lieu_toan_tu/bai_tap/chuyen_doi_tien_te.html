@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chuyen_doi_tien</title>
+</head>
+<body>
+<form>
+    <table>
+        <tr>
+            <th>Amount</th>
+            <th> From Currency</th>
+            <th>To Currency</th>
+        </tr>
+        <tr>
+            <td><input type="text" id="tien"></td>
+            <td><select id="tiengoc">
+                <option>VND</option>
+                <option>USD</option>
+            </select></td>
+            <td><select id="tiendoi">
+                <option>USD</option>
+                <option>VND</option>
+            </select></td>
+            <td><input type="button" value="convert " onclick="doitien()"></td>
+        </tr>
+    </table>
+</form>
+<p id="hienthi"></p>
+<script>
+    function doitien() {
+        let A =document.getElementById("tien").value;
+        let B =document.getElementById("tiengoc").value;
+        let C =document.getElementById("tiendoi").value;
+        if (B == "VND" && C == "USD")
+           ket_qua = parseInt(A)/20000;
+        else if (B == "USD" && C == "VND")
+           ket_qua = parseInt(A)*20000;
+        else
+            ket_qua = "mời bạn chọn lại đơn vị";
+        document.getElementById("hienthi").innerHTML="số tiền là:"+ ket_qua;
+    }
+</script>
+</body>
+</html>

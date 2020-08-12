@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>may_tinh</title>
+</head>
+<body>
+<form>
+    <h1>caculator</h1>
+    <input type="text" id="nhap_so_thu_nhat">
+    <input type="text" id="nhap_so_thu_hai"><br><br>
+    <input type="button" value="addition(+)" onclick="tong()">
+    <input type="button" value="subtraction(-)" onclick="hieu()">
+    <input type="button" value="multiplication(x)" onclick="nhan()">
+    <input type="button" value="division(/)" onclick="chia()">
+</form>
+<p id="hienthi"></p>
+<script>
+  function tong() {
+      let A = document.getElementById("nhap_so_thu_nhat").value;
+      let B = document.getElementById("nhap_so_thu_hai").value;
+      document.getElementById("hienthi").innerHTML="Result Division:" +(parseInt(A)+parseInt(B));
+  }
+  function hieu() {
+      let A = document.getElementById("nhap_so_thu_nhat").value;
+      let B = document.getElementById("nhap_so_thu_hai").value;
+      document.getElementById("hienthi").innerHTML="Result Division:" +(parseInt(A)-parseInt(B));
+  }
+  function nhan() {
+      let A = document.getElementById("nhap_so_thu_nhat").value;
+      let B = document.getElementById("nhap_so_thu_hai").value;
+      document.getElementById("hienthi").innerHTML="Result Division:" +A*B;
+  }
+  function chia() {
+      let A = document.getElementById("nhap_so_thu_nhat").value;
+      let B = document.getElementById("nhap_so_thu_hai").value;
+      document.getElementById("hienthi").innerHTML="Result Division:" +A/B      ;
+  }
+</script>
+</body>
+</html>

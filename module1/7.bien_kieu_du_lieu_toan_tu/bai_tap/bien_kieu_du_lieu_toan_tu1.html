@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai1</title>
+</head>
+<body>
+<form>
+    <label>Vật lý</label>
+    <input type="text" id="diemly"><br><br>
+    <label>Hóa học</label>
+    <input type="text" id="diemhoa"><br><br>
+    <label>Sinh học</label>
+    <input type="text" id="diemsinh"><br><br>
+<input type="button" value="kết quả" onclick="tinhDiem()"><br>
+</form>
+<script>
+    function tinhDiem(){
+        let A =document.getElementById("diemly").value;
+        let B =document.getElementById("diemhoa").value;
+        let C =document.getElementById("diemsinh").value;
+        let D =(parseInt(A)+parseInt(B)+parseInt(C))/3;
+        let E =parseInt(A)+parseInt(B)+parseInt(C);
+        document.write("điểm trung bình:"+ D+ "</br>tổng điểm là:"+ E);
+    }
+
+</script>
+</body>
+</html>
