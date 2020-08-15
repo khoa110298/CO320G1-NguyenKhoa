@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai5</title>
+</head>
+<body>
+<script>
+    let kiemTra = parseInt(prompt("diem kiem tra"));
+    let giuaKy = parseInt(prompt("diem giua ky"));
+    let cuoiKy = parseInt(prompt("diem cuoi ky"));
+    let DTB = (kiemTra + giuaKy*2 +cuoiKy*3)/6;
+    if (DTB>=8){
+        alert("học sinh giỏi");
+    }else if(DTB>=6){
+        alert("học sinh khá");
+    }else if(DTB>=4){
+        alert("học sinh trung bình");
+    }else{
+        alert("học sinh yếu");
+    }
+</script>
+</body>
+</html>

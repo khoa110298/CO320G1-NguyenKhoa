@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai7</title>
+</head>
+<body>
+<!--nôi mạng:<1':1600 đồng-->
+<!--          >=1':1200 đồng-->
+<!--ngoại mạng:<1':2000đồng-->
+<!--           >=1':1500 đồng-->
+<script>
+    let giay = prompt("thoi gian goi");
+    let a = prompt("nhap mang","");
+    if (a == "noimang"){
+        if (giay<60){
+            alert("số tiền là" + giay*1600/60);
+        }else {
+            alert("số tiền là" + giay*1200/60);
+        }
+    }else {
+        if (giay<60){
+            alert("số tiền là" + giay*2000/60);
+        }else {
+            alert("số tiền là" + giay*1500/60);
+        }
+    }
+</script>
+</body>
+</html>
