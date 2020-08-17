@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai8</title>
+</head>
+<body>
+<h2> GAME ĐOÁN SỐ</h2>
+<input type="button" value="play" onclick="playnow()"><br>
+<script>
+    let fisrtNum = parseInt(prompt("khoảng bắt đầu :"));
+    let endNum = parseInt(prompt("khoảng kết thúc:"));
+    let doan = Math.ceil((endNum - fisrtNum)*Math.random()) + fisrtNum;
+    for (let i=1;i<=3;i++){
+        let duDoan = parseInt(prompt("nhập số dự đoán?"));
+        if (duDoan == doan){
+            alert("bạn đã đoán đúng");
+            break;
+        }else if (duDoan > doan){
+            alert("dự đoán của bạn lớn hơn vui lòng nhập lại");
+        }else{
+            alert("dự đoán của bạn nhỏ hơn vui lòng nhập lại");
+        }
+    }
+</script>
+</body>
+</html>

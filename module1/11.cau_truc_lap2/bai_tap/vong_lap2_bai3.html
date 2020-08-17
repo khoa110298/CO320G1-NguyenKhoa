@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai3</title>
+</head>
+<body>
+<script>
+    let hinh1="";
+    for (let i=1;i<=5;i++){
+        for (j=1;j<=i;j++){
+           hinh1 = hinh1 + "*";
+        }
+       hinh1 = hinh1 + "</br>";
+    }
+    document.write(hinh1 +"</br>");
+
+    let hinh2="";
+    for (let i=1;i<=5;i++){
+        for (j=0;j<=5-i;j++){
+            hinh2 = hinh2 + "*";
+        }
+        hinh2 = hinh2 + "</br>";
+    }
+    document.write(hinh2);
+
+    let hinh3 ="";
+    for (let i=1;i<=5;i++){
+        for (let j=0;j<5;j++){
+            if (j<5-i) hinh3 +=" ";
+            else hinh3+="*";
+        }
+        hinh3 +="</br>";
+    }
+    document.write("<pre>"+hinh3+"</pre>");
+
+   let hinh4 = "";
+   for (let i=1; i<=5; i++) {
+       for (let j=1;j<=5;j++) {
+           if (j<i) hinh4 += " ";else hinh4 += "*";
+       }
+       hinh4 +="</br>";
+   }
+   document.write("<pre>"+ hinh4 +"</pre>");
+</script>
+</body>
+</html>

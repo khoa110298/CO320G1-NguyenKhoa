@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai4</title>
+</head>
+<body>
+<script>
+    let f0 = 0;
+    let f1 = 1;
+    let fn = 1;
+    while (fn%5 != 0){
+        fn=f1+f0;
+        f0=f1;
+        f1=fn;
+    }
+    console.log("số đầu tiên trong dãy chia hết cho 5 là " + fn);
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai4</title>
+</head>
+<body>
+<script>
+    let hinhCn ="";
+    let n =7;
+    let m = 20;
+    for (let i=1;i<=n;i++){
+        for (let j=1;j<=m;j++){
+            if (j===1 || i===1 || j===m || i ===n) hinhCn +='*';
+            else hinhCn+=" ";
+        }
+        hinhCn +="<br/>";
+    }
+    document.write("<pre>"+hinhCn+"</pre>");
+</script>
+</body>
+</html>
