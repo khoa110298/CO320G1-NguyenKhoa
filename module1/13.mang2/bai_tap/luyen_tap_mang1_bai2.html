@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai2</title>
+</head>
+<body>
+<script>
+    let array = new Array(10);
+    let n=0;
+    let max=parseInt(prompt("input array 0: "));
+    for (let i=1; i<10; i++){
+        array[i]=parseInt(prompt("input array " + i + " :"));
+        if (array[i]>max){
+            max=array[i];
+            n=i;
+        }
+    }
+    document.write("số lớn nhất là: "+ max +" chỉ số là: " +n);
+</script>
+</body>
+</html>

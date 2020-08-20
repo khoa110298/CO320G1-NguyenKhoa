@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai5</title>
+</head>
+<body>
+<script>
+    let n = parseInt(prompt("nhập số lượng phần tử trong mảng"));
+    let array = new Array(n);
+    let x=0;
+    for (let i=0;i<array.length;i++) {
+        array[i] = prompt("input array:" + i + ":");
+        if (parseInt(array[i])===parseFloat(array[i]) && array[i]<0){
+            x +=1;
+        }
+    }
+    document.write("tổng số nguyên âm có trong chuỗi là:" + x);
+</script>
+</body>
+</html>

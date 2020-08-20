@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tuDien</title>
+</head>
+<body>
+<script>
+
+    let anh=["one","two","three","four","five","six","seven","eight","nine","ten"];
+    let viet=["số 1","số 2","sô 3","số 4","số 5","số 6","số 7","số 8","số 9","số 10"];
+    let nhapVao = prompt("");
+    boolean=false;
+    for (let i = 0; i<anh.length;i++){
+        if (nhapVao===anh[i]){
+            alert(viet[i]);
+            boolean=true;
+            break;
+        }
+    }
+    if(!boolean) {
+        alert("không tìm thấy");
+    }
+</script>
+</body>
+</html>

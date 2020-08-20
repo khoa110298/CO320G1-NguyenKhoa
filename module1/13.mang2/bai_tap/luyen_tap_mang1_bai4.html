@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai4</title>
+</head>
+<body>
+<script>
+    let n = parseInt(prompt("nhập số lượng phần tử trong mảng"));
+    let array = new Array(n);
+    for (let i=0;i<array.length;i++) {
+        array[i] = parseInt(prompt("input array:" + i + ":"));
+        document.write(array[i]+",");
+    }
+    array.reverse();
+    document.write("</br>"+ array);
+</script>
+</body>
+</html>

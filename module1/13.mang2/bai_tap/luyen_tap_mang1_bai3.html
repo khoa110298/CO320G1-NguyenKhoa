@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai3</title>
+</head>
+<body>
+<script>
+    let n = parseInt(prompt("nhập số lượng phần tử trong mảng"));
+    let array = new Array(n);
+    let max =parseInt(prompt("input array 0: "));
+    let trungBinh = max;
+    for (let i=1;i<array.length;i++){
+        array[i]=parseInt(prompt("input array:" + i + ":"));
+        if (array[i]>max){
+            max=array[i];
+        }
+        trungBinh += array[i];
+    }
+    document.write("lớn nhất là: " + max +"</br>" + "trung bình là: " + trungBinh/n);
+</script>
+</body>
+</html>

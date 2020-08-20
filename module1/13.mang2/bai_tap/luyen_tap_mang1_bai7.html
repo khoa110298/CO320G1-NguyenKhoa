@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai7</title>
+</head>
+<body>
+<script>
+    let array = new Array(10);
+    let v = parseInt(prompt("nhâp số nguyên V:"));
+    for (let i=0;i<array.length;i++) {
+        array[i] = parseInt(prompt("input array " + i + ":"));
+    }
+    for (let i=0;i<array.length;i++){
+        if (v===array[i]){
+            array.splice(i,1);
+        }
+    }
+    document.write(array);
+</script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai8</title>
+</head>
+<body>
+<script>
+    let array = new Array(10);
+    for (let i=0;i<array.length;i++) {
+        array[i] = parseInt(prompt("input array " + i + ":"));
+    }
+    document.write(array.sort(function (a,b) {
+        return b-a
+    }));
+</script>
+</body>
+</html>

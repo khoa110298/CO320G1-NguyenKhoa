@@ -9,10 +9,11 @@
     let tien = prompt("nhap tien ban dau");
     let lai = prompt("nhap lai hang thang");
     let thang = prompt("so thang");
+    let a = tien;
     for (let i=1;i<=thang;i++){
         tien = parseFloat(tien) + parseFloat(tien*lai/100);
     }
-    console.log(tien );
+    console.log(tien - a);
 
 
 </script>

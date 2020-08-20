@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai6</title>
+</head>
+<body>
+<script>
+    let array = new Array(10);
+    let v = parseInt(prompt("nhâp số nguyên V:"));
+    let thuoc = false;
+    for (let i=0;i<array.length;i++) {
+        array[i] = parseInt(prompt("input array:" + i + ":"));
+        if (v===array[i]){
+            document.write("V is in the array");
+            thuoc =true;
+        }
+    }
+    if (!thuoc){
+        document.write("V is not in the array");
+    }
+</script>
+</body>
+</html>

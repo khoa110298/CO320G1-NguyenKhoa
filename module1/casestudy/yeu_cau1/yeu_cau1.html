@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>yeuCau1</title>
+</head>
+<body>
+<script>
+    let name;
+    let cmnd;
+    let birthday;
+    let email;
+    let address;
+    let typeService;
+    let typeRoom;
+    let typeCustomer;
+    let discount;
+    let quantityIncluded;
+    let rendDays;
+    let totalPay;
+
+    name = prompt("input name: ");
+    cmnd = prompt("input cmnd: ");
+    birthday = prompt("input birth: ");
+    email = prompt("input emali: ");
+    address = prompt("input address: ");
+    typeService = prompt("input typeservice: ");
+    typeRoom = prompt("input typeroom: ");
+    typeCustomer = prompt("input typecustomer: ");
+    discount = prompt("input discount: ");
+    quantityIncluded = prompt("input quantityincluded: ");
+    rendDays = prompt("input renddays: ");
+    totalPay = 300*rendDays*(1-discount/100);
+
+    document.write("name: "+name +"</br>" + " cmnd: " + cmnd + "</br>" + " email: " + email + "</br>" + " totalpay: "+ totalPay);
+</script>
+</body>
+</html>
