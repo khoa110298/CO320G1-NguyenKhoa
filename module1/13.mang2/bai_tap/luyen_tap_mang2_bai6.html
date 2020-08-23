@@ -6,7 +6,20 @@
 </head>
 <body>
 <script>
-
+    let n = parseInt(prompt("nhập số lượng phần tử trong mảng"));
+    let array = new Array(n);
+    for (let i=0;i<array.length;i++) {
+        array[i] = prompt("input array:" + i + ":");
+    }
+    document.write(array + "</br>");
+    let str= array.join("");
+    let strarray = str.split("");
+    for (i=1; i<strarray.length;i++){
+        if ("-"===strarray[i]){
+            strarray[i]="_";
+        }
+    }
+    document.write(strarray);
 </script>
 </body>
 </html>

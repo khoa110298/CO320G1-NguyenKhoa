@@ -10,8 +10,17 @@
     let array = new Array(n);
     for (let i=0;i<array.length;i++) {
         array[i] = prompt("input array:" + i + ":");
-
     }
+    document.write(array + "</br>");
+    let count=0;
+    let str= array.join("");
+    let strarray = str.split("");
+    for (let i=0; i<strarray.length;i++){
+        if (strarray[i]>=0 && strarray[i]<=9){
+            count +=1;
+        }
+    }
+    document.write(count);
 </script>
 </body>
 </html>
