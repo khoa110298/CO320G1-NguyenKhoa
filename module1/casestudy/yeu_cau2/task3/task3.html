@@ -97,7 +97,17 @@
             }else if (rendDays>2){
                 temp +=10;
             }
-            alert("total pay: " +(money*rendDays-temp));
+            let tempt =0;
+            if (typeCustomer=="Diamond") {
+                tempt += 15;
+            }else if (typeCustomer=="Platium"){
+                tempt +=10;
+            }else if (typeCustomer=="Gold"){
+                tempt +=5;
+            }else if (typeCustomer=="Silver"){
+                tempt +=2;
+            }
+            alert("total pay: " +(money*rendDays-temp -tempt));
             break;
         }
     }

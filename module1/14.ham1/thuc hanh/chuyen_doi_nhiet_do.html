@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>nhiet_do</title>
+</head>
+<body>
+<form>
+    <h1>Temperature Converter</h1>
+    <h3>Type a value in the Fahrenheit field to convert the value to Ceicius:</h3>
+    <p>
+        <label>Fahrenheit</label>
+        <input id="inputFahrenheit" type="number" placeholder=""
+        oninput="temperatureConverter(this.value)"
+        onchange="temperatureConverter(this.value)">
+    </p>
+    <p>Celcius :<span id="outputCeilcius"></span> </p>
+</form>
+<script>
+    function temperatureConverter(valNum) {
+        valNum = parseInt(valNum);
+        document.getElementById("outputCeilcius").innerHTML=(valNum - 32)/1.8;
+
+    }
+</script>
+</body>
+</html>
