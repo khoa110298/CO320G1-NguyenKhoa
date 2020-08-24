@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>nguyen_to</title>
+    <title>nguyenTo</title>
 </head>
 <body>
 <script>
@@ -18,14 +18,13 @@
                 }
             }
         }
-        if (isPrime) {
-            alert(number + " là số nguyên tố");
-        } else {
-            alert(number + " không phải là số nguyên tố");
+        if (isPrime){
+            document.write(number +"</br>");
         }
     }
-    let num = parseInt(prompt("nhập số cần kiểm tra"));
-    check_snt(num);
+    for (let j = 0;j<10000;j++){
+        check_snt(j);
+    }
 </script>
 </body>
 </html>

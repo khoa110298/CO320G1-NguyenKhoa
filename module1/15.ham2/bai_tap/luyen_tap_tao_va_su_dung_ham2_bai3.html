@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai3</title>
+</head>
+<body>
+<script>
+    function check_gt(n) {
+        let giaiThua = 1;
+        for (let i=1; i<=n; i++){
+            giaiThua = giaiThua*i;
+        }
+        return giaiThua;
+    }
+    let num = parseInt(prompt("nhập số cần tính giai thừa"));
+    let tinhNum = check_gt(num);
+    alert(tinhNum);
+</script>
+</body>
+</html>

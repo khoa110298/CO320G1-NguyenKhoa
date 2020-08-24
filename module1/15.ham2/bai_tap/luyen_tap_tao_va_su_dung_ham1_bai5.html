@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai5</title>
+</head>
+<body>
+<script>
+    let ngoiSao = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let chomSao = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+    function check_ktr(thamso) {
+        for (let i = 0; i < chomSao.length; i++) {
+            if (thamso == chomSao[i]){
+                return i;
+            }
+        }
+        return -1;
+    }
+    let thamso = prompt("nhập ngôi sao");
+    let kt = check_ktr(thamso);
+    if (kt != -1) {
+        document.write("Ngôi sao: " + ngoiSao[kt] + " Chòm sao tương ứng là: " + chomSao[kt]);
+    } else{
+        document.write("không tồn tại");
+    }
+
+</script>
+</body>
+</html>
