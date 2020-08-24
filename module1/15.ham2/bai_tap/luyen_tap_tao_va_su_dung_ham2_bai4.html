@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai4</title>
+</head>
+<body>
+<script>
+    function check_kytu(str) {
+        if (str == " ") {
+            return false;
+        } else if (str>=0 && str<=9){
+                return true;
+            }else {
+                return false;
+        }
+    }
+    let n = prompt("nhập");
+    let kt = check_kytu(n);
+    alert(kt);
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai6</title>
+</head>
+<body>
+<script>
+    function check_kt(x) {
+        if(parseFloat(x)===parseInt(x) && x>0){
+           return x + " là số nguyên dương";
+        }
+        return x + " không phải là số nguyên dương";
+    }
+    let number = prompt("nhập số cần kiểm tra");
+    let ketQua = check_kt(number);
+    alert(ketQua);
+</script>
+</body>
+</html>

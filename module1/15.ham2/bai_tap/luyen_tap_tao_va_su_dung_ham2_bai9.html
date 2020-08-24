@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai9</title>
+</head>
+<body>
+<script>
+    let v = prompt("nhập ký tự bất kì");
+    let count = 0;
+    function check_ktra(arr) {
+        for (let i=0;i<arr.length;i++){
+            arr[i] = prompt("nhâp kí tự thứ " + i +":");
+            if (v == arr[i]){
+                count++;
+            }
+        }
+        if (count>0){
+            return count;
+        }else {
+            return -1;
+        }
+    }
+    let n = parseInt(prompt("nhập độ dài mảng"));
+    let array = new Array(n);
+    alert(check_ktra(array));
+
+</script>
+</body>
+</html>
