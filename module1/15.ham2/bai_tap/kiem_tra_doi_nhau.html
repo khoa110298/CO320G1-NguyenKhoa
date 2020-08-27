@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiemTra</title>
+</head>
+<body>
+<script>
+   let arr = prompt("nhâp từ kiểm tra");
+   let newArr = arr.split("");
+   let count = 0;
+   for (let i=0; i<newArr.length;i++){
+       let n = newArr.length - i - 1;
+       document.write(n);
+       if (newArr[i]==newArr[n]){
+               count++;
+       }
+   }
+   document.write(count);
+   if (count == newArr.length){
+       document.write("từ đó đối xứng");
+   }else {
+       document.write("từ đó không đối xứng");
+   }
+</script>
+</body>
+</html>

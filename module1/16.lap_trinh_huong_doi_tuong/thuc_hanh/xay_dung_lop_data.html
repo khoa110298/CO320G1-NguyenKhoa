@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>data</title>
+</head>
+<body>
+<script>
+    class myDay{
+        constructor(day,month,year) {
+            this.day = day;
+            this.month = month;
+            this.year = year;
+        }
+        getDay(){
+            return this.day;
+        }
+        setDay(day){
+            this.day = day;
+        }
+        getMonth(){
+            return this.month;
+        }
+        setMonth(month){
+            this.month = month;
+        }
+        getYear() {
+            return this.year;
+        }
+        setYear(year){
+            this.year = year;
+        }
+    }
+    let data1 = new myDay(2,2,2007);
+    alert(data1.getDay() +"/"+data1.getMonth()+"/"+data1.getYear());
+    let data2 = new myDay(10,10,2019);
+    alert(data2.getDay()+"/"+data2.getMonth()+"/"+data2.getYear());
+</script>
+</body>
+</html>

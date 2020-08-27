@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hcn</title>
+</head>
+<body>
+<canvas id="myCanvas" width="200px" height="100px" style="border:1px solid #d3d3d3;"></canvas>
+<script>
+    class Rectangle{
+        constructor(chieuDai,chieuRong) {
+            this.chieuDai = chieuDai;
+            this.chieuRong = chieuRong;
+        }
+        getChieuDai(){
+            return this.chieuDai;
+        }
+        getChieuRong(){
+            return this.chieuRong;
+        }
+        getPeri(){
+            return 4*(this.chieuRong + this.chieuDai)
+        }
+        getArea(){
+            return this.chieuDai*this.chieuRong;
+        }
+    }
+    let rectangle = new  Rectangle(100,60);
+    let chieuDai = rectangle.getChieuDai();
+    let chieuRong = rectangle.getChieuRong();
+    let area = rectangle.getArea();
+    let peri = rectangle.getPeri();
+    document.write("chiều dài là: " + chieuDai +" chiều rộng là: " + chieuRong + " chu vi: " + peri + " diện tích: " + area);
+    let ctx = document.getElementById("myCanvas").getContext("2d");
+    ctx.fillStyle = "blue";
+    ctx.fillRect(50,20,rectangle.getChieuDai(),rectangle.getChieuRong());
+
+</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>pin</title>
+</head>
+<body>
+<script>
+    class Battery{
+        constructor(energy) {
+            this.energy = energy;
+        }
+        getEnergy(){
+            return this.energy;
+        }
+        decreaseEnergy(){
+            if (this.energy>0){
+                this.energy--;
+            }
+        }
+    }
+    class FlashLamp{
+        constructor(battery) {
+            this.battery = battery;
+        }
+        getBattery(){
+            return this.battery.getEnergy();
+        }
+        turnOn(){
+            this.status = true;
+        }
+        turnOff(){
+            this.status = false;
+        }
+        light(){
+            if (this.status){
+                document.write("đèn sáng");
+            }else {
+                document.write("đèn không sáng");
+            }
+
+        }
+    }
+    let battery = new Battery(10);
+</script>
+</body>
+</html>
