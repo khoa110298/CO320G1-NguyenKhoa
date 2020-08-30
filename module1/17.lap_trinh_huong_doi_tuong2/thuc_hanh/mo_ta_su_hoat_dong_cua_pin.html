@@ -13,35 +13,42 @@
         getEnergy(){
             return this.energy;
         }
-        decreaseEnergy(){
-            if (this.energy>0){
-                this.energy--;
-            }
+        setEnergy(energy){
+            this.energy = energy;
         }
     }
-    class FlashLamp{
+    class FlashLamp {
         constructor(battery) {
             this.battery = battery;
         }
-        getBattery(){
+        getBattery() {
             return this.battery.getEnergy();
         }
-        turnOn(){
+        turnOn() {
             this.status = true;
         }
-        turnOff(){
+        turnOff() {
             this.status = false;
         }
         light(){
-            if (this.status){
+            if (this.status && battery.energy>0){
                 document.write("đèn sáng");
+                battery.energy--;
             }else {
                 document.write("đèn không sáng");
             }
-
         }
     }
-    let battery = new Battery(10);
+    let battery = new Battery(parseInt(prompt("nhập năng lượng")));
+    let flashLamp = new FlashLamp(battery);
+    document.write("Turn on"+"<br/>");
+    flashLamp.turnOn();
+    flashLamp.light();
+    document.write("</br>"+"Battery: "+flashLamp.getBattery()+"</br>");
+
+    document.write("</br>"+"Turn off"+"<br/>");
+    flashLamp.turnOff();
+    flashLamp.light();
 </script>
 </body>
 </html>

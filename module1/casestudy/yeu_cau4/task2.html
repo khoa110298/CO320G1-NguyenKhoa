@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>task2</title>
 </head>
 <body>
 <script>
@@ -17,12 +17,33 @@
                     arrNameCustomer.push(nameCustomer);
                 }
                 let result = "";
+                arrNameCustomer.sort();
                 for (let i=0; i<arrNameCustomer.length; i++){
                     result += (i+1) + ". " + arrNameCustomer[i] + "\n";
                 }
                 alert(result);
-            }
                 break;
+            }
+            case 2: {
+                let check = false;
+                let nameCustomer = prompt("Enter customer you want delete: ");
+                for (let i=0;i<arrNameCustomer.length;i++){
+                    if (arrNameCustomer[i]===nameCustomer){
+                        arrNameCustomer.slice(i,1);
+                        check = true;
+                    }
+                }
+                if (!check){
+                    alert("tên bạn muốn xóa không có trong mảng")
+                }
+                let result = "";
+                arrNameCustomer.sort();
+                for (let i=0; i<arrNameCustomer.length; i++){
+                    result += (i+1) + ". " + arrNameCustomer[i] + "\n";
+                }
+                alert(result);
+                break;
+            }
             default: {
                 alert("failed");
             }
