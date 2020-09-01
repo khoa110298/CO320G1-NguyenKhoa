@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task2</title>
+</head>
+<body>
+<script>
+    class Employee{
+        constructor(name,cmnd,birthday,email,address,typeServicer,typeRoom,typeCustomer,disCount,quantityIncluded,rentDay,tienLuong){
+            this.name = name;
+            this.cmnd = cmnd;
+            this.birthday = birthday;
+            this.email = email;
+            this.address = address;
+            this.typeService = typeServicer;
+            this.typeRoom = typeRoom;
+            this.typeCustomer = typeCustomer;
+            this.disCount = disCount;
+            this.quantityIncluded = quantityIncluded;
+            this.rentDay = rentDay;
+            this.tienLuong = tienLuong;
+        }
+        setName(name){
+            this.name = name;
+        }
+        getName(){
+            return this.name;
+        }
+        setCmnd(cmnd){
+            this.cmnd = cmnd;
+        }
+        getCmnd(){
+            return this.cmnd;
+        }
+        setBirthday(birthday){
+            this.birthday = birthday;
+        }
+        getBirthday(){
+            return this.birthday;
+        }
+        setEmail(email){
+            this.email = email;
+        }
+        getEmail(){
+            return this.email;
+        }
+        setAddress(address){
+            this.address = address;
+        }
+        getAddress(){
+            return this.address;
+        }
+        setTypeServicer(typeServicer){
+            this.typeService = typeServicer;
+        }
+        getTypeServicer(){
+            return this.typeService;
+        }
+        setTypeRoom(typeRoom){
+            this.typeRoom = typeRoom;
+        }
+        getTypeRoom(){
+            return this.typeRoom;
+        }
+        setTypeCustomer(typeCustomer){
+            this.typeCustomer = typeCustomer;
+        }
+        getTypeCustomer(){
+            return this.typeCustomer;
+        }
+        setDisCount(disCount){
+            this.disCount = disCount;
+        }
+        getDisCount(){
+            return this.disCount;
+        }
+        setQuantityIncluded(quantityIncluded){
+            this.quantityIncluded = quantityIncluded;
+        }
+        getQuantityIncluded(){
+            return this.quantityIncluded;
+        }
+        setRentDay(rentDay){
+            this.rentDay = rentDay;
+        }
+        getRentDay(){
+            return this.rentDay;
+        }
+        setTienLuong(tienLuong){
+            this.tienLuong = tienLuong;
+        }
+        getTienLuong(){
+            return this.tienLuong;
+        }
+        totalPay() {
+            let money = 0;
+            if (this.getTypeServicer()==="Villa"){
+                money = 500;
+            }else if (this.getTypeServicer() ==="House"){
+                money = 300;
+            }else if (this.getTypeServicer()=== "Room"){
+                money = 200;
+            }
+            return this.getRentDay()*money*(1-this.getDisCount()/100);
+        }
+        tienluong(){
+            if (this.getTienLuong()==="Manager"){
+                return 500;
+            }else if (this.getTienLuong()==="Sale"){
+                return 300;
+            }else if (this.getTienLuong()==="Marketing"){
+                return 200;
+            }
+        }
+    }
+
+    let regexEmail = /\S+@\S+\.\S+/;
+    let regexBirthday = /^\d{2}[./-]\d{2}[./-]\d{4}$/;
+    let regexCmnd = /^[\d]{8,8}$/;
+    let regexNumber = /^\d+$/;
+    let listEmployee = [];
+    function displayMainMenu() {
+        let choose =parseInt(prompt("1.Add new Employee. " + "\n2.Display Information Employee"  +
+            "\n3.Display total pays Employee" + "\n4.Edit Information Employee" + "\n5.Delete Employee" + "\n6.Exit"));
+        switch (choose) {
+            case 1:{
+                addNewEmployee();
+                break;
+            }
+            case 3:{
+                displayTienluong();
+            }
+            default: {
+                alert("Failded");
+            }
+        }
+    }
+    function displayTienluong() {
+        let temp ="";
+        for (let i=0;i<listEmployee.length;i++){
+            temp += i + ". Name: " + listEmployee[i].getName() + "\n";
+        }
+        let chooseDisplay = parseInt(prompt(temp));
+        alert("tiền lương của bạn là: " + listEmployee[chooseDisplay].tienluong())
+    }
+
+    function addNewEmployee() {
+        let checkValid = false;
+        let cus = new Employee();
+        let name = prompt("input name: ");
+        let cmnd;
+        do {
+            cmnd = prompt("input cmnd: ");
+            if (regexCmnd.test(cmnd)){
+                checkValid =true;
+            }else {
+                alert("chứng minh nhân dân bạn nhập không hợp lệ")
+            }
+        }while (!checkValid);
+        checkValid = false;
+        let birthday;
+        do {
+            birthday = prompt("input birth: ");
+            if (regexBirthday.test(birthday)){
+                checkValid = true;
+            }else {
+                alert("ngày sinh bạn nhập không hợp lệ")
+            }
+        }while (!checkValid);
+        checkValid = false;
+        let email;
+        do {
+            email = prompt("input emali: ");
+            if (regexEmail.test(email)){
+                checkValid = true;
+            }else {
+                alert("Email không hợp lệ.")
+            }
+        }while (!checkValid);
+        checkValid = false;
+
+        let address = prompt("input address: ");
+        let typeService = prompt("input typeservice: ");
+        let typeRoom = prompt("input typeroom: ");
+        let typeCustomer = prompt("input typecustomer: ");
+        let discount;
+        do {
+            discount = prompt("input discount: ");
+            if (regexNumber.test(discount)){
+                checkValid =true;
+            }else {
+                alert("giảm không hợp lệ");
+            }
+        }while (!checkValid);
+        checkValid = false;
+        let quantityIncluded;
+        do {
+            quantityIncluded = prompt("input quantityincluded: ");
+            if (regexNumber.test(quantityIncluded)){
+                checkValid = true;
+            }else {
+                alert("số lượng người nhập không hợp lệ")
+            }
+        }while (!checkValid);
+        checkValid = false;
+        let rentDay;
+        do {
+            rentDay = prompt("input rentday: ");
+            if (regexNumber.test(rentDay)){
+                checkValid = true;
+            }else {
+                alert("bạn nhập số ngày không hợp lệ");
+            }
+        }while (!checkValid);
+        checkValid = false;
+        let tienLuong = prompt("nhập vị trí làm việc")
+        cus.setName(name);
+        cus.setBirthday(birthday);
+        cus.setCmnd(cmnd);
+        cus.setEmail(email);
+        cus.setAddress(address);
+        cus.setTypeServicer(typeService);
+        cus.setTypeRoom(typeRoom);
+        cus.setTypeCustomer(typeCustomer);
+        cus.setDisCount(discount);
+        cus.setQuantityIncluded(quantityIncluded);
+        cus.setRentDay(rentDay);
+        cus.setTienLuong(tienLuong);
+        listEmployee.push(cus);
+        alert("bạn đã thêm thành công");
+        displayMainMenu();
+    }
+    displayMainMenu();
+</script>
+</body>
+</html>
