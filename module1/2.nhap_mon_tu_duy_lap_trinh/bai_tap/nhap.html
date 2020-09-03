@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function check_gt(n) {
+        let giaiThua = 1;
+        for (let i=1; i<=n; i++){
+            giaiThua = giaiThua*i;
+        }
+        return giaiThua;
+    }
+    let n = parseInt(prompt("nhập số n"));
+    let S = 15;
+    for (let i=1;i<=n;i++){
+        S += Math.pow((-1),i)/check_gt(i);
+    }
+    alert(S);
+</script>
+</body>
+</html>

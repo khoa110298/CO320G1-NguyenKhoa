@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function soLyTuong(num) {
+        num.toString();
+        if (parseInt(num.charAt(0)) + parseInt(num.charAt(1)) == num.charAt(2) - num.charAt(3)){
+            return true;
+        }else {
+            return  false;
+        }
+    }
+    let num1 =prompt("nhập số có 4 chữ số");
+    let kt = soLyTuong(num1);
+    if (kt){
+        alert("đó là số lý tưởng");
+    }else if (!kt){
+        alert("đó không phải là số lý tưởng");
+    }
+</script>
+</body>
+</html>

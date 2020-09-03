@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function check_min(num) {
+        let num0 =parseInt(prompt("input num 0: "));
+        let min = num0;
+        for (let i=1; i<num.length; i++){
+            num[i] = parseInt(prompt("input num " + i +":"));
+            if (num[i]<min){
+                min = num[i];
+            }
+        }
+        return min;
+    }
+    let n = parseInt(prompt("nhập số phần tử mảng"));
+    let array = new Array(n);
+    let ktArray = check_min(array);
+    alert(ktArray);
+</script>
+</body>
+</html>

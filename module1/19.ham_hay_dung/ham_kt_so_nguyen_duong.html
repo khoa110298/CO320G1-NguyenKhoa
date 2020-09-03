@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function check_kt(number) {
+        if(parseFloat(number)===parseInt(number) && number>0){
+            return true;
+        }
+        return false;
+    }
+    let number1 = prompt("nhập số cần kiểm tra");
+    let ketQua = check_kt(number1);
+    if (ketQua){
+        alert("đây là số nguyên dương");
+    }else {
+        alert("đây không phải số nguyên dương");
+    }
+</script>
+</body>
+</html>
